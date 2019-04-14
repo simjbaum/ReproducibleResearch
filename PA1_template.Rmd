@@ -16,7 +16,7 @@ Information about the data which contains collected data from various mobile dev
 "This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day."
 
 1.) Code for reading in the dataset and/or processing the data
-```{r 1.) Code for reading in the dataset and/or processing the data }
+```{r Code for reading in the dataset and/or processing the data }
 activity <- read.csv("~/Data_Science/reproducible_reserch/assignment1/activity.csv")
 activity$date <- as.Date(activity$date) # transform to dates
 ```
@@ -31,18 +31,18 @@ dim(activity[is.na(activity$steps),])
 ```
 2.) Histogram of the total number of steps taken each day  
 Note: we can ignore the missing values at first
-```{r 2.) Histogram of the total number of steps taken each day}
+```{r Histogram of the total number of steps taken each day}
 activity_NArm <- activity[!is.na(activity$steps),] #remove NAs
 stepsPerDay <- with(activity_NArm, tapply(steps, date, FUN=sum))
 hist(stepsPerDay, main = "Total number of steps per day", xlab = "Total number of steps")
 ```
 
 3. ) Mean and median number of steps taken each day
-```{r 3.) Mean and median number of steps taken each day}
+```{r Mean and median number of steps taken each day}
 summary(stepsPerDay)
 ``` 
 4.) Time series plot of the average number of steps taken
-```{r  4.) Time series plot of the average number of steps taken}
+```{r  Time series plot of the average number of steps taken}
 r1<-with(activity_NArm, tapply(steps, activity_NArm$interval, mean, na.rm=TRUE))
 plot(r1, type = "l", main = "Time series - averaged steps per day per interval", ylab  ="averaged steps", xlab ="intervals")
 ```

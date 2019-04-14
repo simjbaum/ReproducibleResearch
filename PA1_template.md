@@ -66,8 +66,7 @@ Note: we can ignore the missing values at first
     stepsPerDay <- with(activity_NArm, tapply(steps, date, FUN=sum))
     hist(stepsPerDay, main = "Total number of steps per day", xlab = "Total number of steps")
 
-![](PA1_template_files/figure-markdown_strict/2.) Histogram of the total
-number of steps taken each day-1.png)
+![](PA1_template_files/figure-markdown_strict/Histogram%20of%20the%20total%20number%20of%20steps%20taken%20each%20day-1.png)
 
 1.  ) Mean and median number of steps taken each day
 
@@ -83,8 +82,7 @@ number of steps taken each day-1.png)
     r1<-with(activity_NArm, tapply(steps, activity_NArm$interval, mean, na.rm=TRUE))
     plot(r1, type = "l", main = "Time series - averaged steps per day per interval", ylab  ="averaged steps", xlab ="intervals")
 
-![](PA1_template_files/figure-markdown_strict/4.) Time series plot of
-the average number of steps taken-1.png)
+![](PA1_template_files/figure-markdown_strict/Time%20series%20plot%20of%20the%20average%20number%20of%20steps%20taken-1.png)
 
 5.) The 5-minute interval that, on average, contains the maximum number
 of steps
