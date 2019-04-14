@@ -1,8 +1,10 @@
 ---
-title: "assignment 1 course reproducible research"
+title: "PA1_template"
 author: "Simon Baumgart"
 date: "April 8, 2019"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 This RMarkdown document describes the analysis and returns the figures for the first assignment of the Coursera Course "Reproducible Research".
 
