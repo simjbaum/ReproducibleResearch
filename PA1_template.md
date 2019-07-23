@@ -3,7 +3,7 @@
 Instructions for the assignment
 ================================
 
-The aim of this assignment is to explore a dataset (link below) collected from mobile devices which include the steps taken. The count is collected in 5 minutes intervals each day.
+The aim of this assignment is to explore data collected from different mobile devices which counted the steps taken each day over 5 minutes intervals.
 
 The review criteria in this peer reviewed process are:
 
