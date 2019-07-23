@@ -1,20 +1,36 @@
-This RMarkdown document describes the analysis and returns the figures
-for the first assignment of the Coursera Course "Reproducible Research".
+# Assignment 1 "Reproducible Research" - Coursera
 
-instructions for the assignment1
+Instructions for the assignment
 ================================
 
-[the instructions on the coursera
-website](https://www.coursera.org/learn/reproducible-research/peer/gYyPt/course-project-1)  
-[data used for this
-assignment](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip)
+The aim of this assignment is to explore a dataset (link below) collected from mobile devices which include the steps taken. The count is collected in 5 minutes intervals each day.
 
-Information about the data which contains collected data from various
-mobile devices tracking steps:  
-"This device collects data at 5 minute intervals through out the day.
-The data consists of two months of data from an anonymous individual
-collected during the months of October and November, 2012 and include
-the number of steps taken in 5 minute intervals each day."
+The review criteria in this peer reviewed process are:
+
+Repo
+
+    Valid GitHub URL
+    At least one commit beyond the original fork
+    Valid SHA-1
+    SHA-1 corresponds to a specific commit
+
+Commit containing full submission
+
+    Code for reading in the dataset and/or processing the data
+    Histogram of the total number of steps taken each day
+    Mean and median number of steps taken each day
+    Time series plot of the average number of steps taken
+    The 5-minute interval that, on average, contains the maximum number of steps
+    Code to describe and show a strategy for imputing missing data
+    Histogram of the total number of steps taken each day after missing values are imputed
+    Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
+    All of the R code needed to reproduce the results (numbers, plots, etc.) in the report
+    
+   
+
+[Instruction Details](https://www.coursera.org/learn/reproducible-research/peer/gYyPt/course-project-1)  
+[Data for Assignment 1](https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip)
+
 
 1.) Code for reading in the dataset and/or processing the data
 
@@ -60,7 +76,7 @@ the number of steps taken in 5 minute intervals each day."
     ## [1] 2304    3
 
 2.) Histogram of the total number of steps taken each day  
-Note: we can ignore the missing values at first
+Note: we can ignore the missing values (at first)
 
     activity_NArm <- activity[!is.na(activity$steps),] #remove NAs
     stepsPerDay <- with(activity_NArm, tapply(steps, date, FUN=sum))
