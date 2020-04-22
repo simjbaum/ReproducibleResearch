@@ -1,4 +1,4 @@
-# ReproducibleResearch_JHU_Coursera - Assignment 1
+# ReproducibleResearch  - Assignment 1
 This is the 5th Course of the Data Science Specialization Class offered by the John Hopkins University covered by Coursera
 
 https://www.coursera.org/learn/reproducible-research/home/
